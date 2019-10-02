@@ -125,7 +125,8 @@ body{
         right: 20px;
         bottom: 20px;
         z-index: 1;
-        //left: 0;
+        
+        filter: brightness(100%);
     }
 }
 
@@ -147,7 +148,9 @@ body{
 
     height: 100%;
     width: 45vw;
-    transform: translate(100%,0);
+    transform: translateX(100%);
+
+    //display: none;
     
     
     .menu-close{

@@ -96,6 +96,7 @@ body {
   right: 20px;
   bottom: 20px;
   z-index: 1;
+  filter: brightness(100%);
 }
 
 .menu-slide {
@@ -112,7 +113,7 @@ body {
   padding: 20px;
   height: 100%;
   width: 45vw;
-  transform: translate(100%, 0);
+  transform: translateX(100%);
 }
 .menu-slide .menu-close {
   font-size: 30px;
