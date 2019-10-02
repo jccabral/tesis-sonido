@@ -1,0 +1,129 @@
+@import 'variables';
+@import 'mixins';
+
+
+body{
+    background-color: $marsala;
+    padding: 0;
+    margin: 0;    
+}
+
+//MAIN STRUCTURE
+.content-div{
+    position: relative;
+
+    @include grid-display;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 'header'
+                         'mid'
+                         'footer';
+    &::before{
+        content: "";
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @include background-properties(1);
+        
+        filter: blur(8px) opacity(70%);
+    }   
+}
+
+//HEADER SECTION
+.header{
+    grid-area: header;
+    
+    padding: 15px;
+
+    @include grid-display;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: 'logo space menu';
+    align-items: center;
+
+    img{
+        grid-area: logo;
+        height: 75px;
+
+        margin-right: 15px;
+    }
+
+    .title{
+        grid-area: logo;
+
+        color: $gold-yellow;
+        font-family: $poppins;
+        font-size: 22px;
+
+        transform: translateX(85px);
+
+        cursor: default;
+    }
+
+    .menu{
+        grid-area: menu;
+        justify-self: end;
+        color: #ffffff;
+        font-size: 30px;
+
+        transition: .3s color;
+
+        &:hover{
+            color: $blueish;
+        }
+    }
+}
+
+//CONTENT SECTION
+.intro{
+    grid-area: mid;
+    justify-self: left;
+    align-self: center;
+
+    margin-left: 50px;
+    margin-top: 95px;
+
+    font-family: $atma;
+    color: $gold-yellow;
+
+    cursor: default;
+    
+    h1{
+        font-size: 50px;
+        margin-bottom: -35px;
+    }
+
+    h3{
+        font-size: 30px;
+        margin-bottom: -30px;
+    }
+
+    h5{
+        font-size: 26px;
+    }
+}
+
+//FOOTER SECTIOM
+.footer{
+    grid-area: footer;
+    //justify-self: right;
+    
+
+    padding: 20px;
+
+    
+    //height: 140px;
+
+    img{
+        height: 20px;
+
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        //left: 0;
+    }
+}
+
+@import 'responsive';

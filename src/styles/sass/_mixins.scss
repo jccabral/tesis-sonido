@@ -1,0 +1,16 @@
+@mixin grid-display{
+    display: grid;
+    display: -moz-grid;
+    display: -ms-grid; 
+}
+
+@mixin background-properties($bg-number) {
+    background-image: url('/src/img/background/studio-background-#{$bg-number}.jpg');
+        background-color: $marsala;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100vw 100vh;
+        background-blend-mode: soft-light;
+    
+}
+ 

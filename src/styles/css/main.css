@@ -1,0 +1,115 @@
+body {
+  background-color: #964F4D;
+  padding: 0;
+  margin: 0;
+}
+
+.content-div {
+  position: relative;
+  display: grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header" "mid" "footer";
+}
+.content-div::before {
+  content: "";
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: url("/src/img/background/studio-background-1.jpg");
+  background-color: #964F4D;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw 100vh;
+  background-blend-mode: soft-light;
+  filter: blur(8px) opacity(70%);
+}
+
+.header {
+  grid-area: header;
+  padding: 15px;
+  display: grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas: "logo space menu";
+  align-items: center;
+}
+.header img {
+  grid-area: logo;
+  height: 75px;
+  margin-right: 15px;
+}
+.header .title {
+  grid-area: logo;
+  color: #F8FB9B;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  transform: translateX(85px);
+  cursor: default;
+}
+.header .menu {
+  grid-area: menu;
+  justify-self: end;
+  color: #ffffff;
+  font-size: 30px;
+  transition: 0.3s color;
+}
+.header .menu:hover {
+  color: #5D8CB3;
+}
+
+.intro {
+  grid-area: mid;
+  justify-self: left;
+  align-self: center;
+  margin-left: 50px;
+  margin-top: 95px;
+  font-family: "Atma", sans-serif;
+  color: #F8FB9B;
+  cursor: default;
+}
+.intro h1 {
+  font-size: 50px;
+  margin-bottom: -35px;
+}
+.intro h3 {
+  font-size: 30px;
+  margin-bottom: -30px;
+}
+.intro h5 {
+  font-size: 26px;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 20px;
+}
+.footer img {
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    margin-top: 30px;
+  }
+  .intro h1 {
+    font-size: 34px;
+    margin-bottom: -15px;
+  }
+  .intro h3 {
+    font-size: 24px;
+  }
+  .intro h5 {
+    font-size: 24px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
