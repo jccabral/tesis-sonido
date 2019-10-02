@@ -16,4 +16,19 @@
         }
     }
 
+    .menu-slide{
+
+        .indice{
+            
+            li{
+                font-size: 22px;
+                transform: translateX(10px);
+
+                &:nth-of-type(1){
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+
 }
