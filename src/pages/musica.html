@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link rel="stylesheet" href="/src/styles/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Atma&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="/src/img/logos/fav-icon.png" type="image/x-icon">
+        
+        <script src="https://kit.fontawesome.com/bf8dc5cb08.js" crossorigin="anonymous"></script>
+        
+        <title>Trabajo Final Tecnicatura Sup. En Sonido</title>
+        
+        <style>
+            .content-div::before{
+                background-image: url('/src/img/background/studio-background-2.jpg');
+            }
+        </style>
+    
+    </head>
+
+<body>
+    
+    <div id="content"class="content-div">
+        
+        <!-- HEADER -->
+        <div id="header" class="header">
+            <img src="/src/img/logos/logo.png" alt="tesis-logo">
+            <span id="title" class="title">
+                Musica</span>
+                <a href="#" id="menu" class="menu-open"><i class="fas fa-bars"></i></a>
+        </div>
+        
+        <!-- CANCIONES -->
+        <div id="musica" class="musica">
+            
+            <!-- 01 - DEJA LA VIDA VOLAR -->
+            <div class="cancion">
+                <div class="button">
+                    <i id="btn-state-1" class="fas fa-play-circle btn-state"></i> 
+                    <div class="bg-btn"></div>
+                </div>
+                
+                <p class="song-title">Deja La Vida Volar</p>
+                
+                <div id="cancion-1" class="song-wf"></div>
+            </div>
+
+            <!-- 02 - PUNTO CIEGO -->
+            <div class="cancion">
+                    <div  class="button">
+                        <i id="btn-state-2" class="fas fa-play-circle btn-state"></i> 
+                        <div class="bg-btn"></div>
+                    </div>
+                    
+                    <p class="song-title">Punto Ciego</p>
+                    
+                    <div id="cancion-2" class="song-wf"></div>
+            </div>
+
+            <!-- 03 - FARO DE LOS AHOGADOS -->
+            <div class="cancion">
+                    <div  class="button">
+                        <i id="btn-state-3" class="fas fa-play-circle btn-state"></i> 
+                        <div class="bg-btn"></div>
+                    </div>
+                    
+                    <p class="song-title">Faro De Los Ahogados</p>
+                    
+                    <div id="cancion-3" class="song-wf"></div>
+            </div>
+
+            <!-- 04 - CHALECO/TRAICIONERA -->
+            <div class="cancion">
+                <div  class="button">
+                    <i id="btn-state-4" class="fas fa-play-circle btn-state"></i> 
+                    <div class="bg-btn"></div>
+                </div>
+                
+                <p class="song-title">Chaleco/Traicionera</p>
+                    
+            <div id="cancion-4" class="song-wf"></div>
+            </div>
+
+        </div>
+    
+        <!-- FOOTER -->
+        <div class="footer">
+                <img id="la-metro" src="/src/img/logos/la-metro-logo-yellow.png" alt="la-metro-logo">
+        </div>
+    </div>
+    
+    <!-- MENU -->
+    <div id="menu-slide"class="menu-slide">
+        <a href="#" id="menu-close" class="menu-close"><i class="fas fa-times"></i></a>
+        <ul class="indice">
+            <li><a href="/">Home</a></li>
+            <li id="musica"><a href="/src/pages/informe.html">Musica</a></li>
+            <li><a href="/src/pages/informe.html">Informe</a></li>
+            <li><a href="/src/pages/galeria.html">Galeria</a></li>
+        </ul>
+    </div>           
+</body>
+<script src="/src/js/main.js"></script>
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script src="/src/js/audio.js"></script>
+
+</html>

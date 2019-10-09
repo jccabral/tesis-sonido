@@ -10,13 +10,13 @@ body {
   display: -moz-grid;
   display: -ms-grid;
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "header" "mid" "footer";
+  grid-template-areas: "header" "mid" "bottom-side";
 }
 .content-div::before {
   content: "";
   height: 100vh;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -26,6 +26,7 @@ body {
   background-position: center;
   background-size: 100vw 100vh;
   background-blend-mode: soft-light;
+  -webkit-filter: blur(8px) opacity(70%);
   filter: blur(8px) opacity(70%);
 }
 
@@ -37,6 +38,8 @@ body {
   display: -ms-grid;
   grid-template-columns: repeat(3, auto);
   grid-template-areas: "logo space menu";
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .header img {
@@ -49,6 +52,7 @@ body {
   color: #F8FB9B;
   font-family: "Poppins", sans-serif;
   font-size: 22px;
+  -webkit-transform: translateX(85px);
   transform: translateX(85px);
   cursor: default;
 }
@@ -58,6 +62,7 @@ body {
   color: #ffffff;
   font-size: 30px;
   outline: none;
+  -webkit-transition: 0.3s color;
   transition: 0.3s color;
 }
 .header .menu-open:hover {
@@ -72,6 +77,7 @@ body {
   margin-top: 95px;
   font-family: "Atma", sans-serif;
   color: #F8FB9B;
+  height: 56vh;
   cursor: default;
 }
 .intro h1 {
@@ -86,17 +92,167 @@ body {
   font-size: 26px;
 }
 
-.footer {
-  grid-area: footer;
+.musica {
+  margin: 20px;
+}
+.musica .cancion {
+  grid-area: mid;
+  display: grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "title" "waveform";
+  margin: 5px;
+}
+.musica .cancion .button {
+  grid-area: title;
+  width: 42px;
+  height: 42px;
+  align-self: center;
+  border-radius: 100px;
+}
+.musica .cancion .button .btn-state {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 100px;
+  font-size: 42px;
+  color: #5D8CB3;
+}
+.musica .cancion .button .bg-btn {
+  width: 34px;
+  height: 34px;
+  background-color: #F8FB9B;
+  -webkit-transform: translate(4px, -38px);
+  transform: translate(4px, -38px);
+  border-radius: 100px;
+  position: relative;
+  z-index: -1;
+}
+.musica .cancion .song-title {
+  grid-area: title;
+  -webkit-transform: translateX(50px);
+  transform: translateX(50px);
+  align-self: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  color: #F8FB9B;
+  width: 260px;
+}
+.musica .cancion .song-wf {
+  grid-area: waveform;
+  margin-top: 20px;
+  z-index: 0;
+}
+
+.informe {
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  color: #F8FB9B;
+  text-align: justify;
+}
+.informe .about-title {
+  font-size: 40px;
+  text-align: center;
+}
+.informe .about-subtitle {
+  font-style: italic;
+}
+.informe .autores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.informe .autores .profile {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.informe .autores .profile .img {
+  width: 100px;
+  height: 100px;
+  background-image: url("/src/img/informe/profiles/profile0.jpg");
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+}
+.informe .autores .profile .name {
+  font-size: 12px;
+}
+.informe .diagrama {
+  width: 100%;
+}
+.informe .input-list {
+  width: 100%;
+  background-color: #fff;
+  color: #000000;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.informe .input-list th {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #5D8CB3;
+  border: 1px solid black;
+}
+.informe .input-list td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.galeria {
+  width: auto;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.galeria .foto {
+  margin: 20px;
+  width: 240px;
+  border-radius: 4px;
+}
+
+.footer {
+  grid-area: bottom-side;
+  height: 50px;
+  width: auto;
+  margin-right: 20px;
+  justify-self: right;
+  align-self: end;
 }
 .footer img {
   height: 20px;
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  z-index: 1;
-  filter: brightness(100%);
+  margin-top: 25px;
 }
 
 .menu-slide {
@@ -106,6 +262,7 @@ body {
   display: -ms-grid;
   grid-template-rows: repeat(3, auto);
   background: #ffffff;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 100%);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 50% 100%);
   position: fixed;
   top: 0;
@@ -113,6 +270,7 @@ body {
   padding: 20px;
   height: 100%;
   width: 45vw;
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }
 .menu-slide .menu-close {
@@ -120,6 +278,7 @@ body {
   justify-self: end;
   color: #000000;
   outline: none;
+  -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
 }
 .menu-slide .menu-close:hover {
@@ -132,9 +291,13 @@ body {
   font-weight: 700;
 }
 .menu-slide .indice li {
+  -webkit-transform: translateX(90px);
   transform: translateX(90px);
   font-size: 34px;
-  transition: 0.2s color ease-out;
+  -webkit-filter: opacity(100%);
+  filter: opacity(100%);
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
 }
 .menu-slide .indice li:nth-of-type(1) {
   font-size: 52px;
