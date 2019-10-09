@@ -5,7 +5,9 @@ var cancion1 = WaveSurfer.create({
     progressColor: '#5D8CB3',
     barWidth: '2',
     responsive: true,
-    cursorWidth: '0'
+    cursorWidth: '0',
+    backend: 'MediaElement',
+    mediaType: 'audio'
 });
 
 cancion1.load('/src/audio/01-Deja-La-Vida-Volar.mp3'/* , peaks1 */);
