@@ -193,10 +193,13 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.galeria .foto {
-  margin: 20px;
-  width: 240px;
+.galeria .foto, .galeria .foto-2 {
+  margin: 10px;
+  width: 40vw;
   border-radius: 4px;
+}
+.galeria .foto-2 {
+  width: 85vw;
 }
 
 .footer {
@@ -237,6 +240,7 @@ body {
   outline: none;
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
+  height: 32px;
 }
 .menu-slide .menu-close:hover {
   color: #964F4D;

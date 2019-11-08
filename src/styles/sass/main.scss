@@ -237,9 +237,16 @@ body{
             justify-content: center;
 
    .foto{
-       margin: 20px;
-       width: 240px;
+       margin: 10px;
+       width: 40vw;
        border-radius: 4px;
+   }
+
+   .foto-2{
+       @extend .foto;
+        width: 85vw;
+       
+       
    }
 }
 
@@ -294,6 +301,7 @@ body{
     
         transition: color 0.2s ease-out;
 
+        height: 32px;
 
         &:hover{
             color: $marsala;
