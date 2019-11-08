@@ -121,65 +121,10 @@ body{
 
     margin: 20px;
 
-    .cancion{
-        grid-area: mid;
-        @include grid-display;
-        grid-template-rows: repeat(2, auto);
-        grid-template-areas: 'title'
-                             'waveform';
-        
-        margin: 5px;
-        
-        .button{
-            grid-area: title;
-            width: 42px;
-            height: 42px;
-            align-self: center;
-            border-radius: 100px;
-            
-            .btn-state{
-                -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-                border-radius: 100px;
-                font-size: 42px;
-                color: $blueish;
-            }
-
-            .bg-btn{
-                
-                width: 34px;
-                height: 34px;
-                background-color: $gold-yellow;
-
-                -webkit-transform: translate(4px, -38px);
-
-                        transform: translate(4px, -38px);
-                border-radius: 100px;
-
-                position: relative;
-                z-index: -1;
-            }
-        }
-        .song-title{
-            grid-area: title;
-            -webkit-transform: translateX(50px);
-                    transform: translateX(50px);
-            align-self: center;
-    
-            font-family: $poppins;
-            font-size: 24px;
-            color: $gold-yellow;
-
-            width: 260px;
-        }
-    
-        .song-wf{
-            grid-area: waveform;
-            margin-top: 20px;
-
-            z-index: 0;
-            
-        }
+    .song-title{
+        font-family: $poppins;
+        font-size: 24px;
+        color: $gold-yellow;
     }
 }
 
